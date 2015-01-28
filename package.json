@@ -1,6 +1,6 @@
 {
   "name": "react-count-down",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a simple count down clock component",
   "main": "jsx/count-down.jsx",
   "repository": {
@@ -29,5 +29,14 @@
     "vinyl-source-stream": "*",
     "mocha": "*"
   },
-  "keywords": ["react-component", "react", "timer", "count down", "counter", "clock", "count-down", "pure css"]
+  "keywords": [
+    "react-component",
+    "react",
+    "timer",
+    "count down",
+    "counter",
+    "clock",
+    "count-down",
+    "pure css"
+  ]
 }
