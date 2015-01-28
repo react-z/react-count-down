@@ -1,6 +1,6 @@
-# react-timer
+# react-count-down
 
-react-timer is a simple count down component using react.js.
+react-count-down is a simple count down component using react.js.
 
 ![](example/screenshot.png)
 
