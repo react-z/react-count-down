@@ -1,26 +1,30 @@
 # react-timer
 
-react-timer is a simple timer component using react.js.
+react-timer is a simple count down component using react.js.
 
 ![](example/screenshot.png)
 
 ## Installation
 
-`npm install react-timer --save`
+`npm install react-count-down --save`
 
 ## Usage
 
 ```javascript
 var React = require('react');
-var Timer = require('react-timer');
+var CountDown = require('../jsx/count-down.jsx');
 
-React.renderComponent(<Timer />, document.getElementById("container"));
+var OPTIONS = { endDate: '06/03/2015 10:12 AM', prefix: 'until my birthday!' }
+
+React.render(React.createElement(CountDown, {options: OPTIONS}), document.getElementById("container"));
 
 ```
 
 ## Styles
 
-Include the minimal timer.css styles, or customize with your own styling
+All React UI components are made to be compatible with pure CSS which gives some nice responsive styles.
+
+The components can also be used with your own custom style sheets. A minimal count-down.css style sheet is included as a guide.
 
 ## Development
 

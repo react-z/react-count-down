@@ -12,12 +12,11 @@ var Timer = React.createClass({displayName: "Timer",
   getInitialState: function(){
      return {
        endDate: this.props.options.endDate,
-       prefix: this.props.options.prefix,
-       direction: this.props.options.direction
+       prefix: this.props.options.prefix
      }
   },
   /** 
-   * Increment the counter.
+   * Tick the counter down.
   **/
   tick: function() {
     var startDate = new Date();
@@ -36,7 +35,7 @@ var Timer = React.createClass({displayName: "Timer",
     return (
       React.createElement("div", {className: "react-count-down"}, 
        React.createElement("span", {className: "date"}, " ", this.state.remaining), 
-       React.createElement("span", {className: "title"}, this.state.prefix)
+       React.createElement("span", {className: "prefix"}, " ", this.state.prefix)
       )
     );
   }
