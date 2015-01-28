@@ -1,0 +1,15 @@
+.react-count-down {
+    margin: 0;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.react-count-down .title {
+  color: #343434;  
+}
+.react-count-down .date {
+  color: #03CC85;
+  font-weight: bold;  
+  margin-left: 10px;
+  margin-right: 10px;
+}

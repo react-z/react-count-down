@@ -1,0 +1,33 @@
+{
+  "name": "react-todo",
+  "version": "0.0.1",
+  "description": "a simple todo component",
+  "main": "jsx/todo.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StevenIseki/react-todo.git"
+  },
+  "author": "Steven Iseki",
+  "license": "MIT",
+  "homepage": "https://github.com/StevenIseki/react-todo.git",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "connect": "*",
+    "connect-livereload": "*",
+    "gulp-livereload": "*",
+    "serve-static": "*",
+    "serve-index": "*",
+    "opn": "*",
+    "gulp-react": "*",
+    "react": "*",
+    "browserify": "*",
+    "watchify": "*",
+    "reactify": "*",
+    "vinyl-source-stream": "*",
+    "mocha": "*"
+  },
+  "keywords": ["react-component", "react", "todo"]
+}
