@@ -12,7 +12,7 @@ react-timer is a simple count down component using react.js.
 
 ```javascript
 var React = require('react');
-var CountDown = require('../jsx/count-down.jsx');
+var CountDown = require('react-count-down');
 
 var OPTIONS = { endDate: '06/03/2015 10:12 AM', prefix: 'until my birthday!' }
 
