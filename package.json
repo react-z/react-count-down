@@ -1,6 +1,6 @@
 {
   "name": "react-count-down",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "a simple count down clock component",
   "main": "jsx/count-down.jsx",
   "repository": {
@@ -27,7 +27,23 @@
     "watchify": "*",
     "reactify": "*",
     "vinyl-source-stream": "*",
-    "mocha": "*"
+    "tape": "*"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+    "scripts": {
+    "test": "tape test/tests.js"
   },
   "keywords": [
     "react-component",
