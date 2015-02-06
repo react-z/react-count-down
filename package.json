@@ -1,6 +1,6 @@
 {
   "name": "react-count-down",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "a simple count down clock component",
   "main": "js/count-down.js",
   "repository": {
@@ -42,7 +42,7 @@
       "android-browser/latest"
     ]
   },
-    "scripts": {
+  "scripts": {
     "test": "tape test/tests.js"
   },
   "keywords": [
