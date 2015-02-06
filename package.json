@@ -2,7 +2,7 @@
   "name": "react-count-down",
   "version": "0.0.4",
   "description": "a simple count down clock component",
-  "main": "jsx/count-down.jsx",
+  "main": "js/count-down.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/StevenIseki/react-count-down.git"
