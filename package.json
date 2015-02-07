@@ -1,6 +1,6 @@
 {
   "name": "react-count-down",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "a simple count down clock component",
   "main": "js/count-down.js",
   "repository": {
@@ -32,13 +32,10 @@
   "testling": {
     "files": "test/*.js",
     "browsers": [
-      "ie/8..latest",
       "chrome/22..latest",
       "firefox/16..latest",
-      "safari/latest",
       "opera/11.0..latest",
       "iphone/6",
-      "ipad/6",
       "android-browser/latest"
     ]
   },
@@ -46,8 +43,9 @@
     "test": "tape test/tests.js"
   },
   "keywords": [
-    "react-component",
     "react",
+    "react-component",
+    "react ui",
     "timer",
     "count down",
     "counter",

@@ -1,7 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var DateBetween = require('./date-between.jsx');
+var DateBetween = require('../js/date-between.js');
 
 /**
  * Count down module
