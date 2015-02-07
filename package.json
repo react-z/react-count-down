@@ -1,6 +1,6 @@
 {
   "name": "react-count-down",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "a simple count down clock component",
   "main": "js/count-down.js",
   "repository": {
