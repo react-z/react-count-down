@@ -8,7 +8,7 @@ var DateBetween = require('../js/date-between.js');
  * A simple count down component.
 **/
 
-var Timer = React.createClass({displayName: "Timer",
+var CountDown = React.createClass({displayName: "CountDown",
   getInitialState: function(){
      return {
        endDate: this.props.options.endDate,
@@ -41,4 +41,4 @@ var Timer = React.createClass({displayName: "Timer",
   }
 });
 
-module.exports = Timer;
+module.exports = CountDown;
