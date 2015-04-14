@@ -22,9 +22,7 @@ React.renderComponent(<CountDown options={OPTIONS} />, document.getElementById("
 
 ## Styles
 
-All React UI components are made to be compatible with [pure CSS](http://purecss.io/) which gives some nice responsive styles.
-
-The components can also be used with your own custom style sheets. A minimal count-down.css style sheet is included as a guide.
+react-count-down can be used with your own custom styles. A minimal count-down.css style sheet is included as a guide.
 
 ## Development
 
