@@ -1,27 +1,25 @@
-/** @jsx React.DOM */
-
-var React = require('react');
-var DateBetween = require('../js/date-between.js');
+import React from 'react'
+import DateBetween from './DateBetween'
 
 /**
  * Count down module
  * A simple count down component.
 **/
 
-var CountDown = React.createClass({
+let CountDown = React.createClass({
   getInitialState: function(){
      return {
-       endDate: this.props.options.endDate,
-       prefix: this.props.options.prefix
+       remaining: null
      }
   },
+  
   /** 
    * Tick the counter down.
   **/
   tick: function() {
-    var startDate = new Date();
-    var endDate = new Date(this.state.endDate);
-    var remaining = DateBetween(startDate, endDate);
+    let startDate = new Date();
+    let endDate = new Date(this.props.options.endDate);
+    let remaining = DateBetween(startDate, endDate);
     this.setState({remaining: remaining });
   },
   componentDidMount: function() {
@@ -35,7 +33,7 @@ var CountDown = React.createClass({
     return (
       <div className="react-count-down">
        <span className="date"> {this.state.remaining}</span>
-       <span className="prefix"> {this.state.prefix}</span>
+       <span className="prefix"> {this.props.options.prefix}</span>
       </div>
     );
   }
