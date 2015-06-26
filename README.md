@@ -14,7 +14,7 @@ var CountDown = require('react-count-down');
 
 var OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
 
-React.renderComponent(<CountDown options={OPTIONS} />, document.getElementById("container"));
+React.render(<CountDown options={OPTIONS} />, document.getElementById("container"));
 
 ```
 

@@ -4,6 +4,10 @@
   "description": "a simple count down clock component",
   "main": "lib/count-down.js",
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StevenIseki/react-count-down.git"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": "^0.13.0"
