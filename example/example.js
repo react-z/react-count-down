@@ -1,6 +1,18 @@
-import React from 'react'
-import CountDown from '../lib/count-down'
+import Countdown from '../lib/Countdown' // 'react-count-down'
+import ReactDOM from 'react-dom'
+import React, { Component, PropTypes } from 'react'
 
-let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
+class TestComponent extends Component {
 
-React.render(React.createElement(CountDown, {options: OPTIONS}), document.getElementById("container"));
+  render () {
+    let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
+
+    return (
+      <div>
+        <Countdown options={OPTIONS} />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render( <TestComponent />, document.getElementById('root') )

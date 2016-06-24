@@ -1,6 +1,6 @@
 # react-count-down
 
-react-count-down is a simple count down component using react.js.
+react-count-down is a simple count down component using react.
 
 ## Installation
 
@@ -9,22 +9,33 @@ react-count-down is a simple count down component using react.js.
 ## Usage
 
 ```javascript
-var React = require('react');
-var CountDown = require('react-count-down');
+import Countdown from 'react-count-down'
+import ReactDOM from 'react-dom'
+import React, { Component, PropTypes } from 'react'
 
-var OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
+class TestComponent extends Component {
+  render () {
+    let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
 
-React.render(<CountDown options={OPTIONS} />, document.getElementById("container"));
+    return (
+      <div>
+        <Countdown options={OPTIONS} />
+      </div>
+    )
+  }
+}
 
+ReactDOM.render( <TestComponent />, document.getElementById('root') )
 ```
 
 ## Styles
 
-react-count-down can be used with your own custom styles. A minimal count-down.css style sheet is included as a guide.
+react-count-down can be used with your own custom styles. A minimal [countdown.css](https://github.com/StevenIseki/react-count-down/blob/master/example/public/countdown.css) style sheet is included as a guide.
 
 ## Development
-    
+
     npm install
+    npm run build
     npm test
     npm start
 

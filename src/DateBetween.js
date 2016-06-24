@@ -4,7 +4,7 @@ let DateBetween = function(startDate, endDate) {
   let hour = minute * 60;
   let day = hour * 24;
   let distance = endDate - startDate;
-  
+
   if (distance < 0) {
     return "count down date expired";
   }
