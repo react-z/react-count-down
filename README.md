@@ -9,23 +9,24 @@ react-count-down is a simple count down component using react.
 ## Usage
 
 ```javascript
-import Countdown from 'react-count-down'
+import Countdown from '../lib/Countdown' // 'react-count-down'
 import ReactDOM from 'react-dom'
 import React, { Component, PropTypes } from 'react'
 
-class TestComponent extends Component {
-  render () {
-    let OPTIONS = { endDate: '06/03/2018 10:12 AM', prefix: 'until my birthday!' }
-
-    return (
-      <div>
-        <Countdown options={OPTIONS} />
-      </div>
-    )
-  }
+const cb = () => {
+  console.log('expired callback')
 }
 
+const OPTIONS = { endDate: '03/01/2018 10:55 AM', prefix: 'until my birthday!', cb}
+
+const TestComponent = () => (
+  <div>
+        <Countdown options={OPTIONS} />
+    </div>
+)
+
 ReactDOM.render( <TestComponent />, document.getElementById('root') )
+
 ```
 
 ## Styles
