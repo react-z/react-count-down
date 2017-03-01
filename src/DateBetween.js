@@ -6,7 +6,7 @@ let DateBetween = function(startDate, endDate) {
   let distance = endDate - startDate;
 
   if (distance < 0) {
-    return "count down date expired";
+    return false;
   }
 
   let days = Math.floor(distance / day);
@@ -14,41 +14,15 @@ let DateBetween = function(startDate, endDate) {
   let minutes = Math.floor((distance % hour) / minute);
   let seconds = Math.floor((distance % minute) / second);
 
-  var day_description;
-  var hour_description;
-  var min_description;
-  var sec_description;
 
-  if(days == 1) {
-    day_description = ' day ';
-  } else {
-    day_description = ' days ';
-  }
+  let between = [];
 
-  if(hours == 1) {
-    hour_description = ' hour ';
-  } else {
-    hour_description = ' hours ';
-  }
+  days > 0 ? between.push(`${days} day${days > 1 ? 's' : ''}`) : false;
+  hours > 0 ? between.push(`${hours} hour${hours > 1 ? 's' : ''}`) : false;
+  minutes > 0 ? between.push(`${minutes} minute${minutes > 1 ? 's' : ''}`) : false;
+  seconds > 0 ? between.push(`${seconds} second${seconds > 1 ? 's' : ''}`) : false;
 
-  if(minutes == 1) {
-    min_description = ' minute ';
-  } else {
-    min_description = ' minutes ';
-  }
-
-  if(seconds == 1) {
-    sec_description = ' second';
-  } else {
-    sec_description = ' seconds';
-  }
-
-  let between = days + day_description;
-  between += hours + hour_description;
-  between += minutes + min_description;
-  between += seconds + sec_description;
-
-  return between;
+  return between.join(' ');
 }
 
 module.exports = DateBetween;
