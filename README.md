@@ -11,7 +11,7 @@ react-count-down is a simple count down component using react.
 ## Usage
 
 ```javascript
-import Countdown from '../lib/Countdown' // 'react-count-down'
+import Countdown from 'react-count-down'
 import ReactDOM from 'react-dom'
 import React, { Component, PropTypes } from 'react'
 
@@ -22,13 +22,10 @@ const cb = () => {
 const OPTIONS = { endDate: '03/01/2018 10:55 AM', prefix: 'until my birthday!', cb}
 
 const TestComponent = () => (
-  <div>
-        <Countdown options={OPTIONS} />
-    </div>
+  <Countdown options={OPTIONS} />
 )
 
 ReactDOM.render( <TestComponent />, document.getElementById('root') )
-
 ```
 
 ## Styles
