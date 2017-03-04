@@ -1,5 +1,7 @@
 # react-count-down
 
+[![npm version](https://badge.fury.io/js/react-count-down.svg)](https://badge.fury.io/js/react-count-down)
+
 react-count-down is a simple count down component using react.
 
 ## Installation
