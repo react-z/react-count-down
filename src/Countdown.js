@@ -14,7 +14,7 @@ export default class Countdown extends Component {
 
   componentDidMount() {
     this.tick()
-    this.interval = setInterval(this.tick.bind(this), 1000)
+    this.interval = setInterval(this.tick.bind(this), this.props.tickInterval)
   }
 
   componentWillUnmount() {
@@ -45,3 +45,11 @@ export default class Countdown extends Component {
     )
   };
 }
+
+Countdown.defaultProps = {
+  tickInterval: 1000
+}
+
+Countdown.propTypes = {
+  tickInterval: PropTypes.number /* millisecond */
+};
