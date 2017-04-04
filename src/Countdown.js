@@ -14,7 +14,7 @@ export default class Countdown extends Component {
 
   componentDidMount() {
     this.tick()
-    this.interval = setInterval(this.tick.bind(this), 1000)
+    this.interval = setInterval(this.tick.bind(this), this.props.tickInterval)
   }
 
   componentWillUnmount() {
@@ -37,11 +37,20 @@ export default class Countdown extends Component {
   }
 
   render() {
+    const html = { __html: this.state.remaining };
     return (
       <div className="react-count-down">
-       <span className="date"> {this.state.remaining}</span>
+       <span className="date" dangerouslySetInnerHTML={html}/>
        <span className="prefix"> {this.props.options.prefix}</span>
       </div>
     )
   };
 }
+
+Countdown.defaultProps = {
+  tickInterval: 60000
+}
+
+Countdown.propTypes = {
+  tickInterval: PropTypes.number /* millisecond */
+};
