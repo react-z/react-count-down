@@ -27,7 +27,9 @@ export default class Countdown extends Component {
     let remaining = DateBetween(startDate, endDate)
 
     if(remaining === false){
-      window.clearInterval(this.interval)
+      if(!this.props.options.reset){
+        window.clearInterval(this.interval);
+      }
       this.props.options['cb'] ? this.props.options.cb() :  false
     }
 
