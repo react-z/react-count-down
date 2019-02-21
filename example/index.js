@@ -1,4 +1,4 @@
-import Countdown from '../src/Countdown' // 'react-count-down'
+import Countdown from '../lib/Countdown' // 'react-count-down'
 import ReactDOM from 'react-dom'
 import React from 'react'
 
