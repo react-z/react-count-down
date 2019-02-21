@@ -1,13 +1,19 @@
 import DateBetween from './DateBetween'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * Count down module
  * A simple count down component.
-**/
+ **/
 export default class Countdown extends Component {
+  static get propTypes() {
+    return {
+      options: PropTypes.object
+    }
+  }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { remaining: null }
   }
@@ -26,9 +32,9 @@ export default class Countdown extends Component {
     let endDate = new Date(this.props.options.endDate)
     let remaining = DateBetween(startDate, endDate)
 
-    if(remaining === false){
+    if (remaining === false) {
       window.clearInterval(this.interval)
-      this.props.options['cb'] ? this.props.options.cb() :  false
+      this.props.options['cb'] ? this.props.options.cb() : false
     }
 
     this.setState({
@@ -37,11 +43,30 @@ export default class Countdown extends Component {
   }
 
   render() {
+    const countDownWrapper = {
+      margin: 0,
+      padding: '10px'
+    }
+
+    const date = {
+      fontSize: '150%',
+      fontWeight: '200',
+      lineHeight: 1.5,
+      color: '#666'
+    }
+
+    const prefix = {
+      fontSize: '150%',
+      fontWeight: '200',
+      lineHeight: 1.5,
+      color: '#03CC85'
+    }
+
     return (
-      <div className="react-count-down">
-       <span className="date"> {this.state.remaining}</span>
-       <span className="prefix"> {this.props.options.prefix}</span>
+      <div style={countDownWrapper}>
+        <span style={date}> {this.state.remaining}</span>
+        <span style={prefix}> {this.props.options.prefix}</span>
       </div>
     )
-  };
+  }
 }

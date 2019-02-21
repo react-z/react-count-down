@@ -1,7 +1,7 @@
 {
   "name": "react-count-down",
   "version": "1.1.0",
-  "description": "a simple count down clock component",
+  "description": "A simple count down clock component",
   "main": "lib/Countdown.js",
   "repository": {
     "type": "git",
@@ -10,35 +10,40 @@
   "author": "Steven Iseki <stevenisekimartin@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^15.1.0"
+    "react": "^16.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.9.0",
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.9.0",
-    "enzyme": "^2.3.0",
-    "expect": "^1.20.1",
-    "express": "^4.13.4",
-    "jsdom": "^9.2.1",
-    "react": "^15.1.0",
-    "react-addons-test-utils": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "tape": "^4.5.1",
-    "webpack": "^1.13.1"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "7.3.3",
+    "@babel/preset-env": "7.3.1",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.5",
+    "babel-tape-runner": "^3.0.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "expect": "24.1.0",
+    "html-webpack-plugin": "3.2.0",
+    "jsdom": "13.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "tape": "4.10.1",
+    "webpack": "4.29.4",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.1.14"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
-    "example": "webpack --config ./example/webpack.config.js",
-    "serve": "node ./example/server.js",
-    "start": "npm run example && npm run serve",
-    "test": "tape test/index.js"
+    "dev": "webpack-dev-server --mode=development --port 3000 --inline --hot --config example/webpack.config",
+    "test": "babel-tape-runner test/*.js"
   },
   "keywords": [
     "react",
+    "react count down",
+    "react-count-down",
+    "react count-down",
     "react-component",
     "timer",
     "count down",
